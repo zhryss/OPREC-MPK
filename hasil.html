@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Input</title>
+</head>
+
+<body>
+    <h1>Data Calon Anggota</h1>
+    <ul>
+        <li>Nama: <span id="displayNama"></span></li>
+        <li>Kelas: <span id="displayKelas"></span></li>
+        <li>Foto Anggota: <br><img id="displayFotoanggota" style="max-width: 200px; height: auto;" /></li>
+        <li>Email: <span id="displayEmail"></span></li>
+        <li>Sosial Media: <span id="displaySosialMedia"></span></li>
+        <li>Nomor Telepon: <span id="displayNomorTelepon"></span></li>
+        <li>Motto Hidup: <span id="displayMotto"></span></li>
+    </ul>
+
+    <script>
+        // Ambil data dari Local Storage
+        const data = JSON.parse(localStorage.getItem('calonAnggota'));
+
+        // Tampilkan data di halaman
+        if (data) {
+            document.getElementById('displayNama').textContent = data.nama || '-';
+            document.getElementById('displayKelas').textContent = data.kelas || '-';
+
+            const fotoAnggota = document.getElementById('displayFotoanggota');
+            if (data.foto) {
+                fotoAnggota.src = data.foto;  // Mengatur Data URL sebagai sumber gambar
+            } else {
+                fotoAnggota.alt = 'Foto Tidak Tersedia';
+            }
+
+            document.getElementById('displayEmail').textContent = data.email || '-';
+            document.getElementById('displaySosialMedia').textContent = data.sosialMedia || '-';
+            document.getElementById('displayNomorTelepon').textContent = data.nomorTelepon || '-';
+            document.getElementById('displayMotto').textContent = data.motto || '-';
+        }
+
+    </script>
+</body>
+
+</html>
