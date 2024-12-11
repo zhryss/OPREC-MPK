@@ -1,0 +1,46 @@
+*,
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: lato;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-image: url('bgoprec.png');
+    background-size: cover;
+    background-repeat: repeat; 
+    background-position: top; 
+    height: 100vh; 
+}
+
+.container-md {
+    padding: 15px;
+    border-radius: 5px;
+    background-color:rgb(124, 124, 124, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+label.input-group-text {
+    justify-content: center;
+    text-align: center;
+    font: 700;
+    background-color: rgb(241, 241, 240, 0.5) !important;
+    color: rgb(0, 0, 0); /
+  }
+
+#nama {
+  }
+
+.form {
+    padding-bottom: 10px;
+}
+
+h1 {
+    font-weight: bold;
+    font-family: lato;
+    text-align: center;
+}
