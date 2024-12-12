@@ -1,20 +1,24 @@
-*,
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
-html {
+html, body {
     margin: 0;
     padding: 0;
 }
 
 body{
-    font-family: lato;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Lato', sans-serif;
     padding: 20px;
-    background-image: url('bgoprec.png');
+    background-image: url('oprec.png');
     background-size: cover;
     background-repeat: repeat; 
-    background-position: top; 
-    height: 100vh; 
+    background-position: top;
+    height: 100vh;
+}
+
+.container-index {
+    padding-bottom: 30px;
 }
 
 .container-md {
@@ -43,4 +47,242 @@ h1 {
     font-weight: bold;
     font-family: lato;
     text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    padding-top: 70px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+}
+
+.container-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 231, 201, 0.904);
+    padding: 15px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    margin: 10px;
+}
+
+.container-foto {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: underline;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.container-foto img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+.h1 {
+    font-size: 24px;
+    text-align: center;
+    padding-right: 20px;
+}
+
+
+.data-siswa {
+    background-color: rgb(255, 255, 255, 0.8);
+    padding: 15px;
+    list-style-type: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+li {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 20px 2.35fr;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.spasi {
+    text-align: center;
+}
+
+.value {
+    padding: 5px 15px;
+    background-color: rgb(188, 251, 255, 0.5);
+    text-align: left;
+    border-radius: 15px;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+}
+
+h2 {
+    font-size: large;
+}
+
+/* Container ikon */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;  /* Mengikuti warna teks dari elemen induk */
+}
+
+.social-icons a img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Menghindari efek saat hover */
+.social-icons a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Ikon individual */
+.icon-card {
+    background: #fff;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation: popIn 0.5s ease-in;
+}
+
+/* Gambar ikon */
+.icon-card img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Efek hover */
+.icon-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+/* Klik efek */
+.icon-card:active {
+    transform: scale(0.9);
+}
+
+/* Animasi pop in */
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Media Queries untuk berbagai ukuran layar */
+@media (max-width: 768px) {
+    .h1 {
+        font-size: 20px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .data-siswa {
+        font-size: 18px;
+    }
+
+    .label {
+        font-weight: bold;
+    }
+
+    .container-data {
+        padding: 15px;
+    }
+
+    .container-foto {
+        gap: 5px;
+    }
+
+    .social-icons a {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1 {
+        font-size: 18px;
+        padding-right: 0px;
+    }
+
+    h2{
+        font-size: 15px;
+    }
+
+    .data-siswa {
+        font-size: 16px;
+    }
+
+    .label, .value {
+        font-size: 14px;
+    }
+
+    .container-data {
+        padding: 10px;
+    }
+
+    .social-icons a {
+        width: 50px;
+        height: 50px;
+    }
 }

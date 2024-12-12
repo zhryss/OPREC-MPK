@@ -5,19 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hasil Input</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Data Calon Anggota</h1>
-    <ul>
-        <li>Nama: <span id="displayNama"></span></li>
-        <li>Kelas: <span id="displayKelas"></span></li>
-        <li>Foto Anggota: <br><img id="displayFotoanggota" style="max-width: 200px; height: auto;" /></li>
-        <li>Email: <span id="displayEmail"></span></li>
-        <li>Sosial Media: <span id="displaySosialMedia"></span></li>
-        <li>Nomor Telepon: <span id="displayNomorTelepon"></span></li>
-        <li>Motto Hidup: <span id="displayMotto"></span></li>
-    </ul>
+    <div class="container">
+        <div class="wrapper">
+            <div class="container-data">
+                <div class="container-foto">
+                    <h1 class="h1">Data Calon Anggota</h1>
+                    <img id="displayFotoanggota"/>
+                </div>
+                <ul class="data-siswa">
+                    <li><span class="label">Nama</span><span class="spasi">:</span> <span class="value"
+                            id="displayNama"></span></li>
+                    <li><span class="label">Kelas</span><span class="spasi">:</span> <span class="value"
+                            id="displayKelas"></span></li>
+                    <li><span class="label">Email</span><span class="spasi">:</span> <span class="value"
+                            id="displayEmail"></span></li>
+                    <li><span class="label">Sosial Media</span><span class="spasi">:</span> <span class="value"
+                            id="displaySosialMedia"></span></li>
+                    <li><span class="label">Nomor Telepon</span><span class="spasi">:</span> <span class="value"
+                            id="displayNomorTelepon"></span></li>
+                    <li><span class="label">Motto Hidup</span><span class="spasi">:</span> <span class="value"
+                            id="displayMotto"></span></li>
+                </ul>
+                <h2>This is your Curriculum Vitae!!-❤‍🔥✨
+                </h2>
+            </div>
+        </div>
+    </div>
+    <!-- Kontak Ikon -->
+    <div class="social-icons">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/+6285862971613" target="_blank" class="icon-card whatsapp" title="WhatsApp">
+            <img src="https://img.icons8.com/ios/452/whatsapp.png" alt="WhatsApp">
+            <p>WhatsApp</p>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/mawalasaja/" target="_blank" class="icon-card instagram"
+            title="Instagram">
+            <img src="https://img.icons8.com/ios/452/instagram-new.png" alt="Instagram">
+            <p>Instagram</p>
+        </a>
+    </div>
+
 
     <script>
         // Ambil data dari Local Storage
