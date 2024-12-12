@@ -91,36 +91,31 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(data),
-                    mode: 'no-cors' // Tambahkan ini
+                    mode: 'no-cors'  // Menghindari masalah CORS
                 });
-                alert('Data berhasil dikirim (mode no-cors).');
 
-
-                const result = await response.json();
-                if (result.status === 'success') {
-                    alert('Data berhasil dikirim ke Google Spreadsheet!');
-                } else {
-                    alert('Gagal mengirim data: ' + result.message);
-                }
+                // Berpindah ke halaman berhasil.html tanpa notifikasi alert
+                window.location.href = 'berhasil.html';
             } catch (error) {
                 console.error('Error:', error);
                 alert('Terjadi kesalahan saat mengirim data.');
             }
         }
 
+        // Event listener untuk tombol "Edit"
         document.getElementById('edit').addEventListener('click', function () {
-            history.back(); // Kembali ke halaman sebelumnya
+            history.back();  // Kembali ke halaman sebelumnya
         });
-
 
         // Event listener untuk tombol "Kirim"
         document.getElementById('kirim').addEventListener('click', () => {
             if (data) {
                 sendDataToAppsScript(data);
             } else {
-                alert('Tidak ada data yang dapat dikirim.');
+                alert('Data tidak ditemukan.');
             }
         });
+
     </script>
 
 
