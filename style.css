@@ -99,6 +99,8 @@ h1 {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid black;
+    overflow: hidden;
+    display: block;
 }
 
 .h1 {
@@ -253,6 +255,11 @@ h2 {
         gap: 5px;
     }
 
+    .container-foto img {
+        width: 120px; /* Ukuran lebih kecil */
+        height: 120px; /* Tetap berbentuk lingkaran */
+    }
+
     .social-icons a {
         width: 60px;
         height: 60px;
@@ -279,6 +286,11 @@ h2 {
 
     .container-data {
         padding: 10px;
+    }
+
+    .container-foto img {
+        width: 100px; /* Ukuran lebih kecil */
+        height: 100px; /* Tetap berbentuk lingkaran */
     }
 
     .social-icons a {
