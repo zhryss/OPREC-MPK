@@ -10,56 +10,61 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="padding: 0px;">
     <div class="container">
-        <div class="wrapper">
-            <div class="container-data">
-                <div class="container-foto">
-                    <h1 class="h1 fs-4">Data Calon Anggota</h1>
-                    <img id="displayFotoanggota" />
-                </div>
-                <ul class="data-siswa">
-                    <li><span class="label">Nama</span><span class="spasi">:</span> <span class="value"
-                            id="displayNama"></span></li>
-                    <li><span class="label">Kelas</span><span class="spasi">:</span> <span class="value"
-                            id="displayKelas"></span></li>
-                    <li><span class="label">Email</span><span class="spasi">:</span> <span class="value"
-                            id="displayEmail"></span></li>
-                    <li><span class="label">Sosial Media</span><span class="spasi">:</span> <span class="value"
-                            id="displaySosialMedia"></span></li>
-                    <li><span class="label">Nomor Telepon</span><span class="spasi">:</span> <span class="value"
-                            id="displayNomorTelepon"></span></li>
-                    <li><span class="label">Motto Hidup</span><span class="spasi">:</span> <span class="value"
-                            id="displayMotto"></span></li>
-                </ul>
-                <h2 class="fs-5">This is your Curriculum Vitae!!-❤‍🔥✨
-                </h2>
+        <div class="container-data">
+            <div class="container-foto">
+                <h1 class="fw-bold fs-4">Data Calon Anggota</h1>
+                <img id="displayFotoanggota" />
             </div>
-            <div class="d-grid gap-2 col-6 mx-auto ">
-                <button class="btn btn-primary" type="button" id="edit">Edit Data</button>
-                <button class="btn btn-primary" type="button" id="kirim">Kirim</button>
-            </div>
+            <ul class="data-siswa">
+                <li><span class="label">Nama</span><span class="spasi">:</span> <span class="value"
+                        id="displayNama"></span>
+                </li>
+                <li><span class="label">Kelas</span><span class="spasi">:</span> <span class="value"
+                        id="displayKelas"></span></li>
+                <li><span class="label">Email</span><span class="spasi">:</span> <span class="value"
+                        id="displayEmail"></span></li>
+                <li><span class="label">Sosial Media</span><span class="spasi">:</span> <span class="value"
+                        id="displaySosialMedia"></span></li>
+                <li><span class="label">Nomor Telepon</span><span class="spasi">:</span> <span class="value"
+                        id="displayNomorTelepon"></span></li>
+                <li><span class="label">Motto Hidup</span><span class="spasi">:</span> <span class="value"
+                        id="displayMotto"></span></li>
+            </ul>
+            <h2 class="fw-bold fs-6">This is your Curriculum Vitae!!-❤‍🔥✨</h2>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-primary" type="button" id="edit">Edit Data</button>
+            <button class="btn btn-primary" type="button" id="kirim">Kirim</button>
         </div>
     </div>
     <!-- Kontak Ikon -->
-    <div class="social-icons">
-        <!-- WhatsApp -->
-        <a href="https://wa.me/+6285862971613" target="_blank" class="icon-card whatsapp" title="WhatsApp">
-            <img src="https://img.icons8.com/ios/452/whatsapp.png" alt="WhatsApp">
-            <p></p>
-        </a>
+    <div class="container-index" style=" padding: 20px;">
+        <div class="container-md" style="border-radius: 17px; background-color: rgb(255, 255, 255, 0.7);">
+            <h1>contact us :</h1>
+            <div class="social-icons">
 
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/mawalasaja/" target="_blank" class="icon-card instagram" title="Instagram">
-            <img src="https://img.icons8.com/ios/452/instagram-new.png" alt="Instagram">
-            <p></p>
-        </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/+6285862971613" target="_blank" class="icon-card whatsapp" title="WhatsApp">
+                    <img src="https://img.icons8.com/ios/452/whatsapp.png" alt="WhatsApp">
+                    <p></p>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/mawalasaja/" target="_blank" class="icon-card instagram"
+                    title="Instagram">
+                    <img src="https://img.icons8.com/ios/452/instagram-new.png" alt="Instagram">
+                    <p></p>
+                </a>
+            </div>
+        </div>
     </div>
 
 
     <script>
         // URL Web App dari Google Apps Script
-        const scriptUrl = 'https://script.google.com/macros/s/AKfycbxHZY1QqfVL20d418CIhR9FrGDYJ1_GZPs1vGKY0Ck3q33vwMKPoIH4KP2wubVCmixZ/exec'; // Ganti dengan URL Web App Anda
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbzp8XkXGIKpxeUuxcHjxY-teHSFMJPVhSg9K8Ah6S8zk8bLd3JGSeoD2V8NX3ikGIMX/exec'; // Ganti dengan URL Web App Anda
 
         // Ambil data dari Local Storage
         const data = JSON.parse(localStorage.getItem('calonAnggota'));
