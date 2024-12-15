@@ -36,9 +36,6 @@ label.input-group-text {
     color: rgb(0, 0, 0); /
   }
 
-#nama {
-  }
-
 .form {
     padding-bottom: 10px;
 }
@@ -155,7 +152,6 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -186,7 +182,6 @@ li {
 /* Ikon individual */
 .icon-card {
     background: #fff;
-    padding: 10px;
     width: 100px;
     height: 100px;
     border-radius: 15px;
@@ -267,10 +262,6 @@ li {
     .h1 {
         font-size: 18px;
         padding-right: 0px;
-    }
-
-    h2 fs-4{
-    
     }
 
     .data-siswa {
