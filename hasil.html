@@ -25,6 +25,8 @@
                 </li>
                 <li><span class="label">Kelas</span><span class="spasi">:</span> <span class="value"
                         id="displayKelas"></span></li>
+                <li><span class="label">nisn</span><span class="spasi">:</span> <span class="value"
+                        id="displayNisn"></span></li>
                 <li><span class="label">Email</span><span class="spasi">:</span> <span class="value"
                         id="displayEmail"></span></li>
                 <li><span class="label">Sosial Media</span><span class="spasi">:</span> <span class="value"
@@ -37,13 +39,16 @@
             <h2 class="fw-bold fs-6">Make sure your biodata is correct!!-❤‍🔥✨</h2>
         </div>
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn btn-primary animate__animated animate__fadeInTopLeft" type="button" id="edit">Edit Data</button>
-            <button class="btn btn-primary animate__animated animate__fadeInTopRight" type="button" id="kirim">Kirim</button>
+            <button class="btn btn-primary animate__animated animate__fadeInTopLeft" type="button" id="edit">Edit
+                Data</button>
+            <button class="btn btn-primary animate__animated animate__fadeInTopRight" type="button"
+                id="kirim">Kirim</button>
         </div>
     </div>
     <!-- Kontak Ikon -->
     <div class="container-index" style=" padding: 15px;">
-        <div class="container-md" style="padding-bottom: 20px; border-radius: 17px; background-color: rgb(255, 255, 255, 0.7);">
+        <div class="container-md"
+            style="padding-bottom: 20px; border-radius: 17px; background-color: rgb(255, 255, 255, 0.7);">
             <h1 class="animate__animated animate__pulse animate__infinite" style="font-size: 20px;">contact us :</h1>
             <div class="social-icons">
 
@@ -70,13 +75,14 @@
 
 
     <script>
-        const scriptUrl = 'https://script.google.com/macros/s/AKfycbxnEy6TDiCldkVsc09oHX5exWeflWe7zx5yJvQi9BXCwMKrFIpYgPyxIaDWhf9L3Z74/exec';
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycbwQUCD10zei5fh1KR6DVHOEznNq8u_pvYMbeDNSGMP1BBvOJ4rvHI2vcRCW-jUBFnRD/exec';
 
         const data = JSON.parse(localStorage.getItem('calonAnggota'));
 
         if (data) {
             document.getElementById('displayNama').textContent = data.nama || '-';
             document.getElementById('displayKelas').textContent = data.kelas || '-';
+            document.getElementById('displayNisn').textContent = data.nisn || '-';
 
             const fotoAnggota = document.getElementById('displayFotoanggota');
             if (data.foto) {

@@ -46,27 +46,31 @@
                 </select>
             </div>
         </div>
-        <div class="animate__animated animate__backInLeft">
+        <div class="form animate__animated animate__backInLeft">
+            <label class="input-group-text fw-semibold fs-6 font-family-" for="nisn">Nisn Calon Anggota</label>
+            <input type="number" class="form-control" id="nisn" placeholder="contoh: 1234" required>
+        </div>
+        <div class="animate__animated animate__backInRight">
             <label class="input-group-text fw-semibold fs-6 " for="fotoanggota">Foto Calon Anggota</label>
             <div class="input-group mb-3">
                 <input type="file" class="form-control" id="fotoanggota" accept="image/*">
             </div>
         </div>
-        <div class="mb-3 animate__animated animate__backInRight">
+        <div class="mb-3 animate__animated animate__backInLeft">
             <label class="input-group-text fw-semibold fs-6 " for="email">Email
                 address</label>
             <input type="email" class="form-control" id="email" placeholder="contoh: name@gmail.com">
         </div>
-        <div class="form animate__animated animate__backInLeft">
-            <label class="input-group-text fw-semibold fs-6 font-family-" for="sosialMedia">Sosial Media</label>
+        <div class="form animate__animated animate__backInRight">
+            <label class="input-group-text fw-semibold fs-6" for="sosialMedia">Sosial Media</label>
             <input type="text" class="form-control" id="sosialMedia" placeholder="contoh: akun Instagram" required>
         </div>
-        <div class="form animate__animated animate__backInRight">
+        <div class="form animate__animated animate__backInLeft">
             <label class="input-group-text fw-semibold fs-6 font-family-" for="nomorTelepon">Nomor Telepon
                 Pribadi</label>
             <input type="number" class="form-control" id="nomorTelepon" placeholder="contoh: 081223456789" required>
         </div>
-        <div class="form animate__animated animate__backInLeft">
+        <div class="form animate__animated animate__backInRight">
             <label class="input-group-text fw-semibold fs-6 font-family-" for="motto">Motto Hidup</label>
             <textarea class="form-control" id="motto" rows="3"
                 placeholder="contoh: Hidup adalah proses belajar, setiap hari adalah kesempatan untuk menjadi lebih baik"></textarea>
@@ -155,13 +159,14 @@
             // Ambil data dari form
             const nama = document.getElementById('nama').value;
             const kelas = document.getElementById('kelas').value;
+            const nisn = document.getElementById('nisn').value;
             const fotoanggota = document.getElementById('fotoanggota');
             const email = document.getElementById('email').value;
             const sosialMedia = document.getElementById('sosialMedia').value;
             const nomorTelepon = document.getElementById('nomorTelepon').value;
             const motto = document.getElementById('motto').value;
 
-            if (!nama || !kelas || !fotoanggota.files.length || !email || !sosialMedia || !nomorTelepon || !motto) {
+            if (!nama || !kelas || !nisn || !fotoanggota.files.length || !email || !sosialMedia || !nomorTelepon || !motto) {
                 alert('Harap isi semua field!');
                 return;
             }
@@ -172,7 +177,7 @@
             reader.onloadend = function () {
                 const foto = reader.result;  // Data URL gambar (Base64)
 
-                const data = { nama, kelas, foto, email, sosialMedia, nomorTelepon, motto };
+                const data = { nama, kelas, nisn, foto, email, sosialMedia, nomorTelepon, motto };
                 localStorage.setItem('calonAnggota', JSON.stringify(data));
 
                 window.location.href = 'hasil.html';
